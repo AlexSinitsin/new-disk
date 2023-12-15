@@ -1,57 +1,19 @@
 <template>
   <div class="main-page">
     <div class="left-box">
-      <h1 @click="cl">Мои заметки</h1>
+      <h1>Мои заметки</h1>
       <p>Не забывай о важном, храни его в облаке.</p>
     </div>
     <div class="right-box">
       <img src="../assets/main-img.svg" alt="img" />
     </div>
-    <Modal @close="closeModal" :close="isCloseModalComp">
-      <component @openModal="openModal" :is="isModalTypeComp"></component>
-    </Modal>
   </div>
 </template>
 
 <script>
-import Modal from "../components/ModalBox.vue";
-import TemplateLogIn from "../components/TemplateLogIn.vue";
-import TemplateReg from "../components/TemplateReg.vue";
-
 export default {
   name: "MainPage",
-  components: { Modal, TemplateLogIn, TemplateReg },
-  props: ["id"],
-  data() {
-    return {
-      isCloseModal: false,
-      modalType: {
-        logIn: "TemplateLogIn",
-        reg: "TemplateReg",
-      },
-      isModalType: "TemplateLogIn",
-    };
-  },
-  computed: {
-    isCloseModalComp() {
-      return this.isCloseModal;
-    },
-    isModalTypeComp() {
-      return this.isModalType;
-    },
-  },
-  methods: {
-    closeModal() {
-      this.isCloseModal = false;
-    },
-    openModal(type) {
-      this.isModalType = this.modalType[type];
-      this.isCloseModal = true;
-    },
-    cl() {
-      // console.log(this);
-    },
-  },
+  components: {},
 };
 </script>
 

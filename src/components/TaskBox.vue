@@ -26,8 +26,6 @@ export default {
 </script>
 
 <style>
-.task {
-}
 .task .wrap-task {
   background: #b1c909;
   box-shadow: 0px 15px 15px -10px rgba(0, 0, 0, 0.4);
